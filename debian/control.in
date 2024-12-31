@@ -1,0 +1,15 @@
+Package: rattomail
+Version: VERSION
+Section: mail
+Priority: optional
+Architecture: ARCHITECTURE
+Installed-Size: INSTALLED_SIZE
+Maintainer: Phlummox <phlummox2@gmail.com>
+Conflicts: mail-transport-agent
+Homepage: https://github.com/phlummox/rattomail
+Replaces: mail-transport-agent
+Provides: mail-transport-agent
+Description: simple sendmail replacement
+  Rattomail acts as a minimal (local delivery only) mail delivery agent, or
+  MDA, delivering mail to a local Maildir-format directory. If the required
+  directories do not exist, they are created.

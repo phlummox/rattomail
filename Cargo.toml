@@ -1,0 +1,38 @@
+[package]
+name = "rattomail"
+version = "0.1.0"
+authors = ["phlummox <phlummox2@gmail.com>"]
+description = "minimal MDA with Maildir support"
+repository = "https://github.com/phlummox/rattomail"
+license = "BSD-2-Clause"
+edition = "2021"
+readme = "README.md"
+keywords = ["MDA", "email", "sendmail", "maildir"]
+categories = ["email"]
+
+# Build "bogus" versions of executables intended only for use in testing
+[features]
+test_env_executables = []
+
+[[bin]]
+name = "rattomail"
+path = "src/main.rs"
+
+# Executable that doesn't drop privs -- used for testing only
+[[bin]]
+name = "bogus_rattomail"
+path = "src/bogus_main.rs"
+required-features = ["test_env_executables"]
+
+[dependencies]
+anyhow = "1.0"
+chrono = "0.4"
+clap = { version = "4.5", features = ["cargo", "wrap_help"] }
+log = "0.4"
+maildir = "0.6"
+nix = { version = "0.29", features = ["user"] }
+rust-ini = "0.21"
+simplelog = "0.12"
+
+[dev-dependencies]
+tempfile = "3.14"

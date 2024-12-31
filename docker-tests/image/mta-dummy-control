@@ -1,0 +1,16 @@
+Package: mta-dummy
+Section: mail
+Priority: optional
+Homepage: https://github.com/bogus/bogus
+Standards-Version: 3.9.2
+Version: 1.0
+Maintainer: bogus <bogus@example.com>
+Conflicts: mail-transport-agent
+Replaces: mail-transport-agent
+Provides: mail-transport-agent
+Architecture: all
+Multi-Arch: allowed
+Description:
+ stuff
+ .
+ ugh
